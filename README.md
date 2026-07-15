@@ -1,6 +1,6 @@
 # Linux Incident Response Case Study
 
-A portfolio project demonstrating the complete lifecycle of a simulated Linux security incident—from initial compromise to incident response, threat hunting, and detection engineering.
+A portfolio project demonstrating the complete lifecycle of a simulated Linux security incident, from initial compromise to incident response, threat hunting, and detection engineering.
 
 ## Overview
 
