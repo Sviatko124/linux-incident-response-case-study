@@ -86,23 +86,6 @@ Scheduled reverse shell execution.
 
 ---
 
-# IOC Export
-
-The collected indicators were exported into:
-
-```
-ioc.csv
-```
-
-The CSV format allows future ingestion into:
-
-- SIEM platforms
-- Threat intelligence tools
-- Detection pipelines
-- Investigation workflows
-
----
-
 # IOC Summary
 
 | Category | Count |
