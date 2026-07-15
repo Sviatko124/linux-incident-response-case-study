@@ -1,0 +1,25 @@
+title: Suspicious Cron Modification
+id: 5c5dd52f-5c9d-4b63-8ef5-111111111003
+status: experimental
+
+description: Detects creation or modification of cron jobs.
+
+author: sviatko124
+
+logsource:
+  product: linux
+
+detection:
+  selection:
+    CommandLine|contains: "crontab"
+
+  condition: selection
+
+falsepositives:
+  - Legitimate scheduled administration
+
+level: high
+
+tags:
+  - attack.persistence
+  - attack.t1053

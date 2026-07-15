@@ -1,0 +1,27 @@
+title: Possible Netcat Reverse Shell
+id: 5c5dd52f-5c9d-4b63-8ef5-111111111004
+status: experimental
+
+description: Detects netcat execution using -e.
+
+author: sviatko124
+
+logsource:
+  product: linux
+
+detection:
+  selection:
+    CommandLine|contains|all:
+      - nc
+      - "-e"
+
+  condition: selection
+
+falsepositives:
+  - Rare
+
+level: critical
+
+tags:
+  - attack.command_and_control
+  - attack.t1059

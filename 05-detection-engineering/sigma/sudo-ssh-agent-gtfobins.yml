@@ -1,0 +1,27 @@
+title: Suspicious Sudo ssh-agent Execution
+id: 5c5dd52f-5c9d-4b63-8ef5-111111111002
+status: experimental
+
+description: Detects execution of ssh-agent through sudo.
+
+author: sviatko124
+
+logsource:
+  product: linux
+
+detection:
+  selection:
+    CommandLine|contains|all:
+      - sudo
+      - ssh-agent
+
+  condition: selection
+
+falsepositives:
+  - Administrative troubleshooting
+
+level: high
+
+tags:
+  - attack.privilege_escalation
+  - attack.t1548

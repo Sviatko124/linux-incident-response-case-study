@@ -1,0 +1,9 @@
+#
+# Case Study Detection Rules
+#
+
+alert tcp any any -> $HOME_NET 22 (msg:"Case Study Rule - Excessive SSH connection attempts"; flow:to_server; flags:S; detection_filter:track by_src,count 15,seconds 30; classtype:attempted-admin; sid:1000001; rev:1;)
+
+alert tcp any any -> $HOME_NET any (msg:"Case Study Rule - Possible TCP SYN Scan"; flags:S; flow:stateless; detection_filter:track by_src,count 30,seconds 5; classtype:attempted-recon; sid:1000002; rev:1;)
+
+alert tcp any any -> any 12345 (msg:"Case Study Rule - Possible Netcat Reverse Shell"; sid:1000003; rev:1;)

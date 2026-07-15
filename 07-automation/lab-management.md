@@ -1,0 +1,1 @@
+The scripts in the `scripts` folder automate routine lab tasks to improve reproducibility and consistency across multiple runs. They prepare the environment before the attack, collect evidence after the simulation, and restore the system to a clean state for subsequent exercises.
